@@ -96,16 +96,13 @@ def BFS(Gr,zero,p):
             # visited and enqueue it 
             for i in Gr.neighbors(s): 
                 if infected[i]==False:
-                    if rand.uniform(1,10) < 10:
+                    if rand.uniform(1,10) < p*10:
                         infected[i] = True
                         queue.append(i) 
-                
-                        
-                        
-        for i in range(0,len(infected)):
-            if infected[i]==True:
-                print(i)
+                                    
+        #for i in range(0,len(infected)):
+          #  if infected[i]==True:
+          #      print(i)
                     
             
-BFS(G,0,0.25)
-print(len(inf))
+BFS(G,10,0.25)
